@@ -1,0 +1,16 @@
+[Unit]
+Description=SpotMicroAI
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/spotmicroai/run.sh
+WorkingDirectory=/home/pi/spotmicroai
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+
